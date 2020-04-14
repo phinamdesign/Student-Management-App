@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-6 offset-3">
+      <h2 align="center">Update Ranker</h2>
+      <div style="width: 400px;">
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name"><b>Name</b></label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="ranker.name" name="name">
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

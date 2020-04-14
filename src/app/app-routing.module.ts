@@ -15,6 +15,9 @@ import {DepartmentUpdateComponent} from './component/department/department-updat
 import {SexCreateComponent} from './component/sex/sex-create/sex-create.component';
 import {SexListComponent} from './component/sex/sex-list/sex-list.component';
 import {SexUpdateComponent} from './component/sex/sex-update/sex-update.component';
+import {RankerCreateComponent} from './component/ranker/ranker-create/ranker-create.component';
+import {RankerListComponent} from './component/ranker/ranker-list/ranker-list.component';
+import {RankerUpdateComponent} from './component/ranker/ranker-update/ranker-update.component';
 
 
 const routes: Routes = [
@@ -78,6 +81,18 @@ const routes: Routes = [
   {
     path: 'update-sex/:id',
     component: SexUpdateComponent
+  },
+  {
+    path: 'create-ranker',
+    component: RankerCreateComponent
+  },
+  {
+    path: 'ranker',
+    component: RankerListComponent
+  },
+  {
+    path: 'update-ranker/:id',
+    component: RankerUpdateComponent
   }
 ];
 

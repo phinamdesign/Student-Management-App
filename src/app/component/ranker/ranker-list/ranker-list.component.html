@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="panel panel-primary" align="center">
+    <div class="panel heading">
+      <h2>List Ranker</h2>
+    </div>
+    <div class="panel-body mt-3">
+      <table class="table table-bordered text-center mb-4">
+        <thead class="thead-warning">
+        <tr>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let ranker of ranker | async">
+          <td>{{ranker.name}}</td>
+          <td>
+            <button (click)="deleteRanker(ranker.id)" class="btn btn-danger mr-3">Delete</button>
+            <button (click)="updateRanker(ranker.id)" class="btn btn-warning mr-3">Update</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
