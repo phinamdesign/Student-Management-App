@@ -9,6 +9,9 @@ import {ClassRUpdateComponent} from './component/classR/class-r-update/class-r-u
 import {SchoolCreateComponent} from './component/school/school-create/school-create.component';
 import {SchoolListComponent} from './component/school/school-list/school-list.component';
 import {SchoolUpdateComponent} from './component/school/school-update/school-update.component';
+import {DepartmentCreateComponent} from './component/department/department-create/department-create.component';
+import {DepartmentListComponent} from './component/department/department-list/department-list.component';
+import {DepartmentUpdateComponent} from './component/department/department-update/department-update.component';
 
 
 const routes: Routes = [
@@ -48,6 +51,18 @@ const routes: Routes = [
   {
     path: 'update-school/:id',
     component: SchoolUpdateComponent
+  },
+  {
+    path: 'create-department',
+    component: DepartmentCreateComponent
+  },
+  {
+    path: 'department',
+    component: DepartmentListComponent
+  },
+  {
+    path: 'update-department/:id',
+    component: DepartmentUpdateComponent
   }
 ];
 
