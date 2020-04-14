@@ -29,7 +29,7 @@ export class AddressCreateComponent implements OnInit {
   }
   onSubmit() {
     this.save();
-    alert('Created address is successful!')
+    alert('Created address is successful!');
     this.reloadData();
   }
 

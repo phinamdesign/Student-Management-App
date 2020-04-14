@@ -25,6 +25,9 @@ import { SexUpdateComponent } from './component/sex/sex-update/sex-update.compon
 import { RankerCreateComponent } from './component/ranker/ranker-create/ranker-create.component';
 import { RankerListComponent } from './component/ranker/ranker-list/ranker-list.component';
 import { RankerUpdateComponent } from './component/ranker/ranker-update/ranker-update.component';
+import { ConductCreateComponent } from './component/conduct/conduct-create/conduct-create.component';
+import { ConductListComponent } from './component/conduct/conduct-list/conduct-list.component';
+import { ConductUpdateComponent } from './component/conduct/conduct-update/conduct-update.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,10 @@ import { RankerUpdateComponent } from './component/ranker/ranker-update/ranker-u
     SexUpdateComponent,
     RankerCreateComponent,
     RankerListComponent,
-    RankerUpdateComponent
+    RankerUpdateComponent,
+    ConductCreateComponent,
+    ConductListComponent,
+    ConductUpdateComponent
   ],
   imports: [
     BrowserModule,
