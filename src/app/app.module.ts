@@ -10,6 +10,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { NavigatorComponent } from './navigator/navigator.component';
+import { ClassRCreateComponent } from './component/classR/class-r-create/class-r-create.component';
+import { ClassRListComponent } from './component/classR/class-r-list/class-r-list.component';
+import { ClassRUpdateComponent } from './component/classR/class-r-update/class-r-update.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { NavigatorComponent } from './navigator/navigator.component';
     AddressCreateComponent,
     AddressListComponent,
     AddressUpdateComponent,
-    NavigatorComponent
+    NavigatorComponent,
+    ClassRCreateComponent,
+    ClassRListComponent,
+    ClassRUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-6 offset-3">
+      <h2 align="center">
+        Create ClassR
+      </h2>
+      <div>
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name"><b>ClassR name</b></label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="classR.name" name="name">
+          </div>
+          <button type="submit" class="btn btn-info">Create new ClassR</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
