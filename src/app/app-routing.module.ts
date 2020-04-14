@@ -6,6 +6,9 @@ import {AddressUpdateComponent} from './component/address/address-update/address
 import {ClassRCreateComponent} from './component/classR/class-r-create/class-r-create.component';
 import {ClassRListComponent} from './component/classR/class-r-list/class-r-list.component';
 import {ClassRUpdateComponent} from './component/classR/class-r-update/class-r-update.component';
+import {SchoolCreateComponent} from './component/school/school-create/school-create.component';
+import {SchoolListComponent} from './component/school/school-list/school-list.component';
+import {SchoolUpdateComponent} from './component/school/school-update/school-update.component';
 
 
 const routes: Routes = [
@@ -33,6 +36,18 @@ const routes: Routes = [
   {
     path: 'update-class/:id',
     component: ClassRUpdateComponent
+  },
+  {
+    path: 'create-school',
+    component: SchoolCreateComponent
+  },
+  {
+    path: 'school',
+    component: SchoolListComponent
+  },
+  {
+    path: 'update-school/:id',
+    component: SchoolUpdateComponent
   }
 ];
 

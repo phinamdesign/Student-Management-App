@@ -13,6 +13,9 @@ import { NavigatorComponent } from './navigator/navigator.component';
 import { ClassRCreateComponent } from './component/classR/class-r-create/class-r-create.component';
 import { ClassRListComponent } from './component/classR/class-r-list/class-r-list.component';
 import { ClassRUpdateComponent } from './component/classR/class-r-update/class-r-update.component';
+import { SchoolCreateComponent } from './component/school/school-create/school-create.component';
+import { SchoolListComponent } from './component/school/school-list/school-list.component';
+import { SchoolUpdateComponent } from './component/school/school-update/school-update.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ClassRUpdateComponent } from './component/classR/class-r-update/class-r
     NavigatorComponent,
     ClassRCreateComponent,
     ClassRListComponent,
-    ClassRUpdateComponent
+    ClassRUpdateComponent,
+    SchoolCreateComponent,
+    SchoolListComponent,
+    SchoolUpdateComponent
   ],
   imports: [
     BrowserModule,

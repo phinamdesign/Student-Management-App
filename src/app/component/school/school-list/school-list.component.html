@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="panel panel-primary" align="center">
+    <div class="panel heading">
+      <h2>List School</h2>
+    </div>
+    <div class="panel-body mt-3">
+      <table class="table table-bordered text-center mb-4">
+        <thead class="thead-warning">
+        <tr>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let school of schools | async">
+          <td>{{school.name}}</td>
+          <td>
+            <button (click)="deleteSchool(school.id)" class="btn btn-danger mr-3">Delete</button>
+            <button (click)="updateASchool(school.id)" class="btn btn-warning mr-3">Update</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
