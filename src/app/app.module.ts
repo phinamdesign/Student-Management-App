@@ -19,6 +19,9 @@ import { SchoolUpdateComponent } from './component/school/school-update/school-u
 import { DepartmentCreateComponent } from './component/department/department-create/department-create.component';
 import { DepartmentListComponent } from './component/department/department-list/department-list.component';
 import { DepartmentUpdateComponent } from './component/department/department-update/department-update.component';
+import { SexCreateComponent } from './component/sex/sex-create/sex-create.component';
+import { SexListComponent } from './component/sex/sex-list/sex-list.component';
+import { SexUpdateComponent } from './component/sex/sex-update/sex-update.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { DepartmentUpdateComponent } from './component/department/department-upd
     SchoolUpdateComponent,
     DepartmentCreateComponent,
     DepartmentListComponent,
-    DepartmentUpdateComponent
+    DepartmentUpdateComponent,
+    SexCreateComponent,
+    SexListComponent,
+    SexUpdateComponent
   ],
   imports: [
     BrowserModule,
