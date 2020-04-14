@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-6 offset-3">
+      <h2 align="center">
+        Create Address
+      </h2>
+      <div>
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name"><b>Address name</b></label>
+            <input type="text" class="form-control" placeholder="address name" id="name" required [(ngModel)]="address.name" name="name">
+          </div>
+          <button type="submit" class="btn btn-info">Create new address</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
