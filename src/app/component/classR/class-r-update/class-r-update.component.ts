@@ -25,18 +25,17 @@ export class ClassRUpdateComponent implements OnInit {
     this.classR = new Address();
     this.id = this.route.snapshot.params.id;
     this.classRService.getClassR(this.id).subscribe(data => {console.log(data); this.classR = data; }, error => console.log(error));
-    this.reloadData();
   }
   updateAddress() {
     this.classRService.updateClassR(this.id, this.classR).subscribe(data => console.log(data), error => console.log(error));
     this.classR = new Address();
+    this.reloadData();
     this.gotoList();
   }
   onSubmit() {
     this.updateAddress();
   }
   gotoList() {
-    this.reloadData();
     this.router.navigate(['class']);
   }
 

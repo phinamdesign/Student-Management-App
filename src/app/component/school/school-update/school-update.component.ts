@@ -25,18 +25,17 @@ export class SchoolUpdateComponent implements OnInit {
     this.school = new Address();
     this.id = this.route.snapshot.params.id;
     this.schoolService.getSchool(this.id).subscribe(data => {console.log(data); this.school = data; }, error => console.log(error));
-    this.reloadData();
   }
   updateSchool() {
     this.schoolService.updateSchool(this.id, this.school).subscribe(data => console.log(data), error => console.log(error));
     this.school = new Address();
+    this.reloadData();
     this.gotoList();
   }
   onSubmit() {
     this.updateSchool();
   }
   gotoList() {
-    this.reloadData();
     this.router.navigate(['school']);
   }
 

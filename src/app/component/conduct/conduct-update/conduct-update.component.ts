@@ -24,18 +24,17 @@ export class ConductUpdateComponent implements OnInit {
     this.conduct = new Conduct();
     this.id = this.route.snapshot.params.id;
     this.conductService.getConduct(this.id).subscribe(data => {console.log(data); this.conduct = data; }, error => console.log(error));
-    this.reloadData();
   }
   updateConduct() {
     this.conductService.updateConduct(this.id, this.conduct).subscribe(data => console.log(data), error => console.log(error));
     this.conduct = new Conduct();
+    this.reloadData();
     this.gotoList();
   }
   onSubmit() {
     this.updateConduct();
   }
   gotoList() {
-    this.reloadData();
     this.router.navigate(['conduct']);
   }
 

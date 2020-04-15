@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="panel panel-primary" align="center">
+    <div class="panel heading">
+      <h2>List Student</h2>
+    </div>
+    <div class="panel-body mt-3">
+      <table class="table table-bordered text-center mb-4">
+        <thead class="thead-warning">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Sex</th>
+          <th>Address</th>
+          <th>School</th>
+          <th>Department</th>
+          <th>Class</th>
+          <th>Ranker</th>
+          <th>Conduct</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let student of students | async">
+          <td>{{student.name}}</td>
+          <td>{{student.age}}</td>
+          <td>{{student.sex.name}}</td>
+          <td>{{student.address.name}}</td>
+          <td>{{student.school.name}}</td>
+          <td>{{student.department.name}}</td>
+          <td>{{student.classR.name}}</td>
+          <td>{{student.ranker.name}}</td>
+          <td>{{student.conduct.name}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

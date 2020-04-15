@@ -1,0 +1,83 @@
+<div class="col-6 offset-3">
+  <h2 class="text-center">Create new Student</h2>
+  <form
+    name="form"
+    [formGroup]="studentForm"
+    (ngSubmit)="studentForm.valid && onSubmit()"
+    novalidate
+  >
+    <div class="form-group">
+      <label>Student name</label>
+      <input type="text" class="form-control" formControlName="name"/>
+      <div class="alert-danger" *ngIf="studentForm.get('name').invalid && studentForm.get('name').touched"
+           style="color: red">
+        Student name must be at least 1 characters
+      </div>
+    </div>
+    <div class="form-group">
+      <label>age</label>
+      <input type="number" class="form-control" formControlName="age"/>
+      <div class="alert-danger" *ngIf="studentForm.get('age').invalid && studentForm.get('age').touched"
+           style="color: red">
+        Age is greater than or equal to zero
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Sex</label>
+      <select class="form-control" (change)="addSex(sex.value)" #sex>
+        <option value="null">Select Sex</option>
+        <option *ngFor="let a of sexList" value="{{a.id}}">{{a.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Address</label>
+      <select class="form-control" (change)="addAddress(address.value)" #address>
+        <option value="null">Select address</option>
+        <option *ngFor="let address of addressList" value="{{address.id}}">{{address.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>School</label>
+      <select class="form-control" (change)="addSchool(school.value)" #school>
+        <option value="null">Select school</option>
+        <option *ngFor="let school of schoolList" value="{{school.id}}">{{school.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Department</label>
+      <select class="form-control" (change)="addDepartment(department.value)" #department>
+        <option value="null">Select department</option>
+        <option *ngFor="let department of departmentList" value="{{department.id}}">{{department.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Class</label>
+      <select class="form-control" (change)="addClass(classR.value)" #classR>
+        <option value="null">Select class</option>
+        <option *ngFor="let classR of classList" value="{{classR.id}}">{{classR.name}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Ranker</label>
+      <select class="form-control" (change)="addRanker(ranker.value)" #ranker>
+        <option value="null">Select ranker</option>
+        <option *ngFor="let ranker of rankerList" value="{{ranker.id}}">{{ranker.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Conduct</label>
+      <select class="form-control" (change)="addConduct(conduct.value)" #conduct>
+        <option value="null">Select conduct</option>
+        <option *ngFor="let conduct of conductList" value="{{conduct.id}}">{{conduct.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-info btn-block">Create</button>
+    </div>
+  </form>
+</div>

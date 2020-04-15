@@ -25,18 +25,17 @@ export class RankerUpdateComponent implements OnInit {
     this.ranker = new Ranker();
     this.id = this.route.snapshot.params.id;
     this.rankerService.getRanker(this.id).subscribe(data => {console.log(data); this.ranker = data; }, error => console.log(error));
-    this.reloadData();
   }
   updateRanker() {
     this.rankerService.updateRanker(this.id, this.ranker).subscribe(data => console.log(data), error => console.log(error));
     this.ranker = new Address();
+    this.reloadData();
     this.gotoList();
   }
   onSubmit() {
     this.updateRanker();
   }
   gotoList() {
-    this.reloadData();
     this.router.navigate(['ranker']);
   }
 

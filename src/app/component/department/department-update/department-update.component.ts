@@ -26,18 +26,17 @@ export class DepartmentUpdateComponent implements OnInit {
     this.id = this.route.snapshot.params.id;
     // tslint:disable-next-line:max-line-length
     this.departmentService.getDepartment(this.id).subscribe(data => {console.log(data); this.department = data; }, error => console.log(error));
-    this.reloadData();
   }
   updateDepartment() {
     this.departmentService.updateDepartment(this.id, this.department).subscribe(data => console.log(data), error => console.log(error));
     this.department = new Address();
+    this.reloadData();
     this.gotoList();
   }
   onSubmit() {
     this.updateDepartment();
   }
   gotoList() {
-    this.reloadData();
     this.router.navigate(['department']);
   }
 

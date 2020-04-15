@@ -28,6 +28,10 @@ import { RankerUpdateComponent } from './component/ranker/ranker-update/ranker-u
 import { ConductCreateComponent } from './component/conduct/conduct-create/conduct-create.component';
 import { ConductListComponent } from './component/conduct/conduct-list/conduct-list.component';
 import { ConductUpdateComponent } from './component/conduct/conduct-update/conduct-update.component';
+import { StudentCreateComponent } from './component/student/student-create/student-create.component';
+import { StudentListComponent } from './component/student/student-list/student-list.component';
+import { StudentUpdateComponent } from './component/student/student-update/student-update.component';
+import { StudentDeleteComponent } from './component/student/student-delete/student-delete.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,11 @@ import { ConductUpdateComponent } from './component/conduct/conduct-update/condu
     RankerUpdateComponent,
     ConductCreateComponent,
     ConductListComponent,
-    ConductUpdateComponent
+    ConductUpdateComponent,
+    StudentCreateComponent,
+    StudentListComponent,
+    StudentUpdateComponent,
+    StudentDeleteComponent
   ],
   imports: [
     BrowserModule,

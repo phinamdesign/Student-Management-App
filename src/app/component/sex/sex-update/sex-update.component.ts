@@ -25,18 +25,17 @@ export class SexUpdateComponent implements OnInit {
     this.sex = new Sex();
     this.id = this.route.snapshot.params.id;
     this.sexService.getSex(this.id).subscribe(data => {console.log(data); this.sex = data; }, error => console.log(error));
-    this.reloadData();
   }
   updateSex() {
     this.sexService.updateSex(this.id, this.sex).subscribe(data => console.log(data), error => console.log(error));
     this.sex = new Address();
+    this.reloadData();
     this.gotoList();
   }
   onSubmit() {
     this.updateSex();
   }
   gotoList() {
-    this.reloadData();
     this.router.navigate(['sex']);
   }
 
