@@ -28,7 +28,7 @@ import {StudentDeleteComponent} from './component/student/student-delete/student
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'addresses', pathMatch: 'full'},
+  {path: '', redirectTo: 'student', pathMatch: 'full'},
   {
     path: 'create-address',
     component: AddressCreateComponent

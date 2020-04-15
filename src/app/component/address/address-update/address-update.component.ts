@@ -35,7 +35,7 @@ export class AddressUpdateComponent implements OnInit {
     this.updateAddress();
   }
   gotoList() {
-    this.router.navigate(['addresses']);
+    this.router.navigate(['address']);
   }
 
 }
