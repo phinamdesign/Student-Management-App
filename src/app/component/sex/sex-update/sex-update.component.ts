@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
-import {Address} from '../../../model/address';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Sex} from '../../../model/sex';
 import {SexService} from '../../../service/sex.service';
@@ -28,7 +27,7 @@ export class SexUpdateComponent implements OnInit {
   }
   updateSex() {
     this.sexService.updateSex(this.id, this.sex).subscribe(data => console.log(data), error => console.log(error));
-    this.sex = new Address();
+    this.sex = new Sex();
     this.reloadData();
     this.gotoList();
   }

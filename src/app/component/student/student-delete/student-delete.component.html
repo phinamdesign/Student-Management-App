@@ -16,7 +16,8 @@
           <th>Class</th>
           <th>Ranker</th>
           <th>Conduct</th>
-          <th>Action</th>
+          <th>Update</th>
+          <th>Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -30,7 +31,10 @@
           <td>{{student.classR.name}}</td>
           <td>{{student.ranker.name}}</td>
           <td>{{student.conduct.name}}</td>
-          <td><button class="btn btn-danger" (click)="deleteStudent(student.id)">Delete</button></td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteStudent(student.id)">Delete</button>
+          </td>
+          <td><a [routerLink]="'/update-student/'+ student.id"><button class="btn btn-success">Update</button></a></td>
         </tr>
         </tbody>
       </table>

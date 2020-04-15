@@ -40,5 +40,4 @@ export class StudentDeleteComponent implements OnInit {
         );
     }
   }
-
 }

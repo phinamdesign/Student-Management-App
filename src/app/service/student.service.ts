@@ -30,6 +30,7 @@ export class StudentService {
     });
   }
 
+
   updateStudent(student: Student): Observable<any> {
     return this.http.put(this.baseUrl + '/' + student.id, {
       name: student.name,

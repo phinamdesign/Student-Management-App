@@ -26,9 +26,6 @@ export class ClassRListComponent implements OnInit {
         error => console.log(error));
     }
   }
-  ClassRs(id: number) {
-    this.router.navigate(['class', id]);
-  }
   updateClassR(id: number) {
     this.router.navigate(['update-class', id]);
   }

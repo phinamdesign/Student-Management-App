@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
-import {Address} from '../../../model/address';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Department} from '../../../model/department';
 import {DepartmentService} from '../../../service/department.service';
@@ -29,7 +28,7 @@ export class DepartmentUpdateComponent implements OnInit {
   }
   updateDepartment() {
     this.departmentService.updateDepartment(this.id, this.department).subscribe(data => console.log(data), error => console.log(error));
-    this.department = new Address();
+    this.department = new Department();
     this.reloadData();
     this.gotoList();
   }

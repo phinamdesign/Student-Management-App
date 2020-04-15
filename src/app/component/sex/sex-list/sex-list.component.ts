@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
-import {AddressService} from '../../../service/address.service';
 import {Router} from '@angular/router';
 import {SexService} from '../../../service/sex.service';
 

@@ -28,7 +28,7 @@ export class SchoolUpdateComponent implements OnInit {
   }
   updateSchool() {
     this.schoolService.updateSchool(this.id, this.school).subscribe(data => console.log(data), error => console.log(error));
-    this.school = new Address();
+    this.school = new School();
     this.reloadData();
     this.gotoList();
   }

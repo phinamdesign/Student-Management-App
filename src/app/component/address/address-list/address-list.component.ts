@@ -26,9 +26,6 @@ export class AddressListComponent implements OnInit {
         error => console.log(error));
     }
   }
-  Addresses(id: number) {
-    this.router.navigate(['addresses', id]);
-  }
   updateAddress(id: number) {
     this.router.navigate(['update-address', id]);
   }

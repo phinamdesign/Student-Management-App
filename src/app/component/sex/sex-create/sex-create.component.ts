@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs';
-import {Address} from '../../../model/address';
-import {AddressService} from '../../../service/address.service';
 import {Router} from '@angular/router';
 import {Sex} from '../../../model/sex';
 import {SexService} from '../../../service/sex.service';
@@ -28,11 +25,11 @@ export class SexCreateComponent implements OnInit {
   }
   save() {
     this.sexService.createSex(this.sex).subscribe(data => console.log(data), error => console.log(error));
-    this.sex = new Sex();
+    this.newSex();
   }
   onSubmit() {
     this.save();
-    alert('Created sex is successful!')
+    alert('Created sex is successful!');
     this.reloadData();
   }
 

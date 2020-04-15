@@ -25,11 +25,11 @@ export class DepartmentCreateComponent implements OnInit {
   }
   save() {
     this.departmentService.createDepartment(this.department).subscribe(data => console.log(data), error => console.log(error));
-    this.department = new Department();
+    this.newDepartment();
   }
   onSubmit() {
     this.save();
-    alert('Created department is successful!')
+    alert('Created department is successful!');
     this.reloadData();
   }
 

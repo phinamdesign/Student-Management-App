@@ -27,11 +27,11 @@ export class ClassRCreateComponent implements OnInit {
   }
   save() {
     this.classRService.createClassR(this.classR).subscribe(data => console.log(data), error => console.log(error));
-    this.classR = new ClassR();
+    this.newClassR();
   }
   onSubmit() {
     this.save();
-    alert('Created classR is successful!')
+    alert('Created classR is successful!');
     this.reloadData();
   }
 

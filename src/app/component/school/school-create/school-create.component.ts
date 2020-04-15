@@ -25,11 +25,11 @@ export class SchoolCreateComponent implements OnInit {
   }
   save() {
     this.schoolService.createSchool(this.school).subscribe(data => console.log(data), error => console.log(error));
-    this.school = new School();
+    this.newSchool();
   }
   onSubmit() {
     this.save();
-    alert('Created school is successful!')
+    alert('Created school is successful!');
     this.reloadData();
   }
 

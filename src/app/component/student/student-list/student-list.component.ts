@@ -1,13 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Sex} from '../../../model/sex';
-import {Address} from '../../../model/address';
-import {School} from '../../../model/school';
-import {ClassR} from '../../../model/classR';
-import {Ranker} from '../../../model/ranker';
-import {Conduct} from '../../../model/conduct';
-import {Department} from '../../../model/department';
-import {Student} from '../../../model/student';
-import {FormControl, FormGroup} from '@angular/forms';
 import {SexService} from '../../../service/sex.service';
 import {AddressService} from '../../../service/address.service';
 import {SchoolService} from '../../../service/school.service';
@@ -25,23 +16,8 @@ import {Observable} from 'rxjs';
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent implements OnInit {
-  // private nameStudent = '';
   private id: number;
-  // private name: string;
-  // private age: number;
-  // private sex: Sex;
-  // private address: Address;
-  // private school: School;
-  // private classR: ClassR;
-  // private ranker: Ranker;
-  // private conduct: Conduct;
-  // private department: Department;
-  // listStudent: Student[] = [];
   students: Observable<any>;
-
-  studentForm = new FormGroup({
-    name: new FormControl('')
-  });
 
   constructor(
     private sexService: SexService,
